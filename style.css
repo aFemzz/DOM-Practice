@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+body{
+    background-color: grey;
+}
+/* Initial Condition */
+section{
+    border-radius: 1rem;
+    width: 40%;
+    margin-top: 2%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    background-color: whitesmoke;
+
+    .Outside-Container{
+        justify-content: center;
+        margin: 5%;
+
+        .Bigger-Note p{
+            display: block;
+            font-size: 0.8rem;
+            width: 70%;
+            margin-left: 15%;
+            justify-content: center;
+            margin-top: 2%;
+            font-weight: 650;
+            text-align: center;
+        }
+
+        .Preview-Button {
+            display: flex;
+            justify-content: center;
+
+            Button{
+                
+                border: none;
+                color: black;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 2rem 0.5rem;
+                cursor: pointer;
+                background-color: gold;
+                border-radius: 10px;
+            }
+
+            
+        }
+    }
+
+    .Flex-Container-Total-Pembayaran-Pertama{
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 5%;
+        .Container-1{
+            width: 30%;
+            input{
+                margin-top: 5%;
+                margin-bottom: 5%;
+                margin-right: 5%;
+                height: 2rem;
+
+                /* styling */
+                border: solid 2px gold;
+                border-radius: 7px;
+            }
+        }
+        .Container-2{
+            width: 30%;
+            select{
+                margin-top: 5%;
+                margin-bottom: 5%;
+                margin-right: 5%;
+                height: 2rem;
+
+                /* styling */
+                border: solid 2px gold;
+                border-radius: 7px;
+            }
+        }
+        .Little-Note p{
+            font-size: 0.7rem;
+        }
+    }
+
+    
+
+    .Outside-Container h2{
+        font-size: 1.5rem;
+        font-weight: 100;
+        text-align: center;
+    }
+    .Card-Container{
+        margin-left: 3.7%;
+        display: grid;
+        width: 90%;
+        grid-template-columns: 30% 30% 30%;
+        column-gap: 25px;
+        row-gap: 25px;
+        grid-template-rows: 30% 30%;
+        justify-content: space-evenly;
+        padding: 0.5rem;
+        
+        button{
+            border :none;
+            border-radius: 1rem;
+            margin: 1%;
+            padding: 3rem 1rem;
+            background-color: rgba(245, 245, 245, 0.514);
+            justify-items: center;
+            text-align: center;
+            box-shadow: 2px 5px 10px 2px rgba(0,0,0,0.25) ;
+        }
+
+        button:hover {
+            border: 2px solid gold;
+            background-color: rgb(255, 255, 255);
+          }
+
+        p{
+            font-size : 0.8rem;
+        }
+    }
+}

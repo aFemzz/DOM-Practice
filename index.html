@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM EXERCISES</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="Kredit">
+        <div class="Outside-Container" id="Kredit-Menu-Initial" style="display: none;">
+            <h2>
+                Simulasikan Kredit Sesuai Kebutuhanmu
+            </h2>
+            <div class="Card-Container" style="display: none;">
+                <button class="Card-1">
+                    <div><p>Mobil Baru</p></div>
+                </button>
+                <button class="Card-2">
+                    <div><p>Mobil Bekas</p></div>
+                </button>
+                <button class="Card-3">
+                    <div><p>Motor Baru</p></div>
+                </button>
+                <button class="Card-4">
+                    <div><p>Motor Bekas</p></div>
+                </button>
+                <button class="Card-5">
+                    <div><p>Elektronik, Furniture & Gadget</p></div>
+                </button>
+                <button class="Card-6">
+                    <div><p>Pinjaman Dana Tunai</p></div>
+                </button> 
+            </div>
+        </div>
+
+        <div class="Outside-Container" id="Mobil-Baru">
+            
+            <h2>Kredit Mobil Baru</h2>
+
+            <div class="Flex-Container-Total-Pembayaran-Pertama">
+                <div class="Container-1">
+                    <form>
+                        <label>Harga Mobil Baru</label><br>
+                        <input type="text" placeholder="Masukan Harga Unit">
+                        <div class="Little-Note"><p>Note : Minimal harga Mobil Baru 70 juta rupiah</p></div>
+                    </form>
+                </div>
+                <div class="Container-2">
+                    <form>
+                        <label>Pilih Acuan Perhitungan</label><br>
+                        <select name="angsuran-mobil-baru" id="angsuran-mobil-baru" >
+                            <option value="Pilih-Tipe-Perhitungan">Pilih Tipe Perhitungan</option>
+                            <option value="Total-Pembayaran-Utama">Total Pembayaran Utama</option>
+                            <option value="Angsuran-Per-Bulan">Angsuran Per Bulan</option>
+                        </select>
+                    </form>
+                </div>
+            </div>
+
+            <div class="Flex-Container-Total-Pembayaran-Pertama">
+                <div class="Container-1">
+                    <form>
+                        <label>Total Pembayaran Pertama</label><br>
+                        <input type="text" placeholder="Masukan Total Pembayaran">
+                        <div class="Little-Note"><p>Note : Minimal harga Mobil Baru 70 juta rupiah</p></div>
+                    </form>
+                </div>
+                <div class="Container-2">
+                    <form>
+                        <label>Pilih Area</label><br>
+                        <select name="Area" id="Pilih-Area" >
+                            <option value="Pilih-Area-Tempat-Tinggal">Pilih Area Tempat Tinggal</option>
+                            <option value="Aceh-Sumut-dkk">Aceh, Sumut, Riau</option>
+                            <option value="Total-Pembayaran-Utama">Bali, NTT</option>
+                            <option value="Angsuran-Per-Bulan">Jabar</option>
+                            <option value="Pilih-Tipe-Perhitungan">Jabodetabek</option>
+                            <option value="Total-Pembayaran-Utama">Jateng</option>
+                            <option value="Angsuran-Per-Bulan">Jatim</option>
+                        </select>
+                    </form>
+                </div>
+            </div>
+
+            <div class="Bigger-Note">
+                <p>Hasil dari Simulasi Kredit bersifat tidak mengikat dan akan berbeda tiap kota, 
+                    dealer dan jenis barang</p>
+            </div>
+
+            <div class="Preview-Button">
+                <button class="Lihat-Simulasi">Lihat Simulasi</button>
+                <button class="Kembali">Kembali</button>
+            </div>
+
+
+            
+        </div>
+    </section>
+</body>
+</html>
