@@ -8,12 +8,13 @@
 </head>
 <body>
     <section class="Kredit">
-        <div class="Outside-Container" id="Kredit-Menu-Initial" style="display: none;">
+        <!-- Initial View -->
+        <div class="Outside-Container" id="Kredit-Menu-Initial" style="display: inline;" >
             <h2>
                 Simulasikan Kredit Sesuai Kebutuhanmu
             </h2>
-            <div class="Card-Container" style="display: none;">
-                <button class="Card-1">
+            <div class="Card-Container" >
+                <button class="Card-1" onclick="SimulationPage()">
                     <div><p>Mobil Baru</p></div>
                 </button>
                 <button class="Card-2">
@@ -34,36 +35,40 @@
             </div>
         </div>
 
-        <div class="Outside-Container" id="Mobil-Baru">
+
+
+        <!-- Kredit Mobil Baru Button Pressed -->
+        <div class="Outside-Container" id="Mobil-Baru" style="display: none;">
             
             <h2>Kredit Mobil Baru</h2>
 
-            <div class="Flex-Container-Total-Pembayaran-Pertama">
+            <div class="Flex-Container-Total-Pembayaran-Pertama" style="display: flex;">
                 <div class="Container-1">
                     <form>
                         <label>Harga Mobil Baru</label><br>
-                        <input type="text" placeholder="Masukan Harga Unit">
+                        <input type="number" placeholder="Masukan Harga Unit">
                         <div class="Little-Note"><p>Note : Minimal harga Mobil Baru 70 juta rupiah</p></div>
                     </form>
                 </div>
                 <div class="Container-2">
                     <form>
                         <label>Pilih Acuan Perhitungan</label><br>
-                        <select name="angsuran-mobil-baru" id="angsuran-mobil-baru" >
-                            <option value="Pilih-Tipe-Perhitungan">Pilih Tipe Perhitungan</option>
-                            <option value="Total-Pembayaran-Utama">Total Pembayaran Utama</option>
+                        <select name="angsuran-mobil-baru" id="angsuran-mobil-baru" onchange="PembayaranUtama()">
+                            <option value="Pilih-Tipe-Perhitungan" >Pilih Tipe Perhitungan</option>
+                            <option value="Total-Pembayaran-Utama" >Total Pembayaran Utama</option>
                             <option value="Angsuran-Per-Bulan">Angsuran Per Bulan</option>
                         </select>
                     </form>
                 </div>
             </div>
 
-            <div class="Flex-Container-Total-Pembayaran-Pertama">
+            <!-- Total Pembayaran Utama Selected -->
+            <div class="Flex-Container-Total-Pembayaran-Pertama" id="Total-Pembayaran-Utama"  style="display: none;">
                 <div class="Container-1">
                     <form>
                         <label>Total Pembayaran Pertama</label><br>
-                        <input type="text" placeholder="Masukan Total Pembayaran">
-                        <div class="Little-Note"><p>Note : Minimal harga Mobil Baru 70 juta rupiah</p></div>
+                        <input type="number" placeholder="Masukan Total Pembayaran">
+                        <div class="Little-Note"><p>Note : Minimal Pembayaran Pertama 30% dari harga Mobil Baru</p></div>
                     </form>
                 </div>
                 <div class="Container-2">
@@ -72,29 +77,103 @@
                         <select name="Area" id="Pilih-Area" >
                             <option value="Pilih-Area-Tempat-Tinggal">Pilih Area Tempat Tinggal</option>
                             <option value="Aceh-Sumut-dkk">Aceh, Sumut, Riau</option>
-                            <option value="Total-Pembayaran-Utama">Bali, NTT</option>
-                            <option value="Angsuran-Per-Bulan">Jabar</option>
-                            <option value="Pilih-Tipe-Perhitungan">Jabodetabek</option>
-                            <option value="Total-Pembayaran-Utama">Jateng</option>
-                            <option value="Angsuran-Per-Bulan">Jatim</option>
+                            <option value="Bali, NTT">Bali, NTT</option>
+                            <option value="Jabar">Jabar</option>
+                            <option value="Jabodetabek">Jabodetabek</option>
+                            <option value="Jateng">Jateng</option>
+                            <option value="Jatim">Jatim</option>
                         </select>
                     </form>
                 </div>
             </div>
 
-            <div class="Bigger-Note">
+            <div class="Flex-Container-Angsuran-Per-Bulan" style="display: none;">
+                <div class="Container-1">
+                    <form>
+                        <label>Total Pembayaran Pertama</label><br>
+                        <input type="number" placeholder="Masukan Total Pembayaran">
+                        <div class="Little-Note"><p>Note : Minimal Pembayaran Pertama 30% dari harga Mobil Baru</p></div>
+                    </form>
+                </div>
+                <div class="Container-2">
+                    <form>
+                        <label>Pilih Area</label><br>
+                        <select name="Area" id="Pilih-Area" >
+                            <option value="Pilih-Area-Tempat-Tinggal">Pilih Area Tempat Tinggal</option>
+                            <option value="Aceh-Sumut-dkk">Aceh, Sumut, Riau</option>
+                            <option value="Bali, NTT">Bali, NTT</option>
+                            <option value="Jabar">Jabar</option>
+                            <option value="Jabodetabek">Jabodetabek</option>
+                            <option value="Jateng">Jateng</option>
+                            <option value="Jatim">Jatim</option>
+                        </select>
+                    </form>
+                </div>
+            </div>
+
+
+            <!-- Angsuran Per Bulan Selected -->
+            <div class="Flex-Container-Angsuran-Perbulan" id="Angsuran-Perbulan"  style="display: none;">
+                <div class="Container-1">
+                    <form>
+                        <label>Angsuran Per Bulan</label><br>
+                        <input type="number" placeholder="Masukan Angsuran Per Bulan">
+                        <div class="Little-Note"><p>Note : Minimal Pembayaran Pertama 30% dari harga Mobil Baru</p></div>
+                    </form>
+                </div>
+                <div class="Container-2">
+                    <form>
+                        <label>Pilih Area</label><br>
+                        <select name="Area" id="Pilih-Area" >
+                            <option value="Pilih-Area-Tempat-Tinggal">Pilih Area Tempat Tinggal</option>
+                            <option value="Aceh-Sumut-dkk">Aceh, Sumut, Riau</option>
+                            <option value="Bali, NTT">Bali, NTT</option>
+                            <option value="Jabar">Jabar</option>
+                            <option value="Jabodetabek">Jabodetabek</option>
+                            <option value="Jateng">Jateng</option>
+                            <option value="Jatim">Jatim</option>
+                        </select>
+                    </form>
+                </div>
+            </div>
+
+            <div class="Flex-Container-Angsuran-Per-Bulan" style="display: none;">
+                <div class="Container-1">
+                    <form>
+                        <label>Total Pembayaran Pertama</label><br>
+                        <input type="number" placeholder="Masukan Total Pembayaran">
+                        <div class="Little-Note"><p>Note : Minimal Pembayaran Pertama 30% dari harga Mobil Baru</p></div>
+                    </form>
+                </div>
+                <div class="Container-2">
+                    <form>
+                        <label>Pilih Area</label><br>
+                        <select name="Area" id="Pilih-Area" >
+                            <option value="Pilih-Area-Tempat-Tinggal">Pilih Area Tempat Tinggal</option>
+                            <option value="Aceh-Sumut-dkk">Aceh, Sumut, Riau</option>
+                            <option value="Bali, NTT">Bali, NTT</option>
+                            <option value="Jabar">Jabar</option>
+                            <option value="Jabodetabek">Jabodetabek</option>
+                            <option value="Jateng">Jateng</option>
+                            <option value="Jatim">Jatim</option>
+                        </select>
+                    </form>
+                </div>
+            </div>
+
+
+            <!-- Always Visible -->
+            <div class="Bigger-Note" id="big-note" style="display: none;">
                 <p>Hasil dari Simulasi Kredit bersifat tidak mengikat dan akan berbeda tiap kota, 
                     dealer dan jenis barang</p>
             </div>
 
-            <div class="Preview-Button">
+            <div class="Preview-Button" id="Simulate-Button" style="display: none;">
                 <button class="Lihat-Simulasi">Lihat Simulasi</button>
-                <button class="Kembali">Kembali</button>
+                <button class="Kembali" onclick="backToMainPage()">Kembali</button>
             </div>
-
-
-            
         </div>
     </section>
+    <script src="script.js"></script>
 </body>
 </html>

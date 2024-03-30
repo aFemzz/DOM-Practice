@@ -19,6 +19,7 @@ section{
     background-color: whitesmoke;
 
     .Outside-Container{
+        display: inline;
         justify-content: center;
         margin: 5%;
 
@@ -52,6 +53,9 @@ section{
                 border-radius: 10px;
             }
 
+            button:hover{
+                background-color: rgb(219, 186, 0);
+            }
             
         }
     }
@@ -86,8 +90,43 @@ section{
                 border-radius: 7px;
             }
         }
+
+        
         .Little-Note p{
             font-size: 0.7rem;
+        }
+    }
+
+    .Flex-Container-Angsuran-Per-Bulan{
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 5%;
+
+        .Container-1{
+            width: 30%;
+            input{
+                margin-top: 5%;
+                margin-bottom: 5%;
+                margin-right: 5%;
+                height: 2rem;
+
+                /* styling */
+                border: solid 2px gold;
+                border-radius: 7px;
+            }
+        }
+        .Container-2{
+            width: 30%;
+            select{
+                margin-top: 5%;
+                margin-bottom: 5%;
+                margin-right: 5%;
+                height: 2rem;
+
+                /* styling */
+                border: solid 2px gold;
+                border-radius: 7px;
+            }
         }
     }
 
